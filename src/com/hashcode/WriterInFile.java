@@ -6,7 +6,7 @@ import java.io.IOException;
 public class WriterInFile {
     public static void Write(){
         try {
-            FileWriter myWriter = new FileWriter("out.txt");
+            FileWriter myWriter = new FileWriter(Manager.EXAMPLE + "_out.txt");
 
             String toWrite = "";
 //            myWriter.write(Logic.libraryWorking.size()+"\n");

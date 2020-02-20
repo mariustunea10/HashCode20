@@ -11,12 +11,15 @@ public class Manager {
     public static int NrDays;
     public static ArrayList<Book> AllBooks = new ArrayList<>();
     public static ArrayList<Library> AllLibs = new ArrayList<>();
-    public static final String A = "src/a_example.txt";
-    public static final String B = "src/b_read_on.txt";
-    public static final String C = "src/c_incunabula.txt";
-    public static final String D = "src/d_tough_choices.txt";
-    public static final String E = "src/e_so_many_books.txt";
-    public static final String F = "src/f_libraries_of_the_world.txt";
+    public static final String A = "a_example";
+    public static final String B = "b_read_on";
+    public static final String C = "c_incunabula";
+    public static final String D = "d_tough_choices";
+    public static final String E = "e_so_many_books";
+    public static final String F = "f_libraries_of_the_world";
+
+
+    public static final String EXAMPLE = F;
 
 
     public static void SortByDaysAllLibs(){
@@ -39,7 +42,7 @@ public class Manager {
     public static void Read(){
         Scanner scanner = null;
         try {
-            scanner = new Scanner(new File(F)); //TODO
+            scanner = new Scanner(new File("src/" + EXAMPLE + ".txt")); //TODO
 
             NrBooks = scanner.nextInt();
             NrLib = scanner.nextInt();
