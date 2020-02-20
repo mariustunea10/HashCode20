@@ -9,11 +9,16 @@ public class Manager {
     public static int NrBooks;
     public static int NrLib;
     public static int NrDays;
-    public static Set<Book> AllBooks = new HashSet<>();
+    public static ArrayList<Book> AllBooks = new ArrayList<>();
     public static ArrayList<Library> AllLibs = new ArrayList<>();
 
-    public static void SortByDays(){
+    public static void SortByDaysAllLibs(){
         AllLibs.sort((h1, h2) -> Integer.compare(h1.Time, h2.Time));
+        System.out.println(AllLibs.size());
+    }
+
+    public static void SortBookByIdInLib(Library library){
+        library.Books.sort((h1, h2) -> Integer.compare(h1.id, h2.id));
         System.out.println(AllLibs.size());
     }
 

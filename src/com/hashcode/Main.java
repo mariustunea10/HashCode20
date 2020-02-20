@@ -5,6 +5,6 @@ public class Main {
     public static void main(String[] args) {
 
         Manager.Read();
-        Manager.SortByDays();
+        Manager.SortByDaysAllLibs();
     }
 }
