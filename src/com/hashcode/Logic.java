@@ -1,5 +1,6 @@
 package com.hashcode;
 
+import java.io.Console;
 import java.util.ArrayList;
 
 public class Logic {
@@ -26,7 +27,9 @@ public class Logic {
         }
     }
 
+    static int dayNo = 0;
     public static void DoWork(){
+        System.out.println(dayNo++ + " din "+Manager.NrDays);
         for (Library l:libraryWorking) {
             int perDay = l.NoOfBookPerDay;
             for(int i = 0; i<perDay;i++)
