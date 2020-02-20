@@ -36,9 +36,15 @@ public class Logic {
             {
                 if(l.Books.size()>0)
                 {
-                    Book b = l.Books.get(0);
-                    l.Books.remove(0);
+
+                    Book b;
+                    do{
+                        b = l.Books.get(0);
+                        l.Books.remove(0);
+                    } while(l.Books.size() > 0 && b.scaned);
                     l.ScanBooks.add(b);
+                    b.scaned = true;
+
                 }
             }
         }

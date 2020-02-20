@@ -11,6 +11,13 @@ public class Manager {
     public static int NrDays;
     public static ArrayList<Book> AllBooks = new ArrayList<>();
     public static ArrayList<Library> AllLibs = new ArrayList<>();
+    public static final String A = "src/a_example.txt";
+    public static final String B = "src/b_read_on.txt";
+    public static final String C = "src/c_incunabula.txt";
+    public static final String D = "src/d_tough_choices.txt";
+    public static final String E = "src/e_so_many_books.txt";
+    public static final String F = "src/f_libraries_of_the_world.txt";
+
 
     public static void SortByDaysAllLibs(){
         AllLibs.sort((h1, h2) -> Integer.compare(h1.Time, h2.Time));
@@ -32,7 +39,7 @@ public class Manager {
     public static void Read(){
         Scanner scanner = null;
         try {
-            scanner = new Scanner(new File("src/d_tough_choices.txt.txt"));
+            scanner = new Scanner(new File(F)); //TODO
 
             NrBooks = scanner.nextInt();
             NrLib = scanner.nextInt();
