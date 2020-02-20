@@ -32,7 +32,7 @@ public class Manager {
     public static void Read(){
         Scanner scanner = null;
         try {
-            scanner = new Scanner(new File("src/c_incunabula.txt"));
+            scanner = new Scanner(new File("src/d_tough_choices.txt.txt"));
 
             NrBooks = scanner.nextInt();
             NrLib = scanner.nextInt();
