@@ -45,6 +45,7 @@ public class Manager {
                 Book b = new Book();
                 b.id = idBook++;
                 b.score = Integer.parseInt(s);
+                b.scaned = false;
 
                 AllBooks.add(b);
             }
