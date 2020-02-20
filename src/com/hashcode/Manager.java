@@ -18,7 +18,7 @@ public class Manager {
     }
 
     public static void SortBookByIdInLib(Library library){
-        library.Books.sort((h1, h2) -> Integer.compare(h1.score, h2.score));
+        library.Books.sort((h1, h2) -> Integer.compare(h2.score, h1.score));
         System.out.println(AllLibs.size());
     }
 
@@ -32,7 +32,7 @@ public class Manager {
     public static void Read(){
         Scanner scanner = null;
         try {
-            scanner = new Scanner(new File("src/a_example.txt"));
+            scanner = new Scanner(new File("src/c_incunabula.txt"));
 
             NrBooks = scanner.nextInt();
             NrLib = scanner.nextInt();
@@ -52,7 +52,10 @@ public class Manager {
 
             int libraryIndex = 0;
             while(scanner.hasNextLine()){
+
                 line = scanner.nextLine();
+                if(line.isEmpty())
+                    break;
                 Library l = new Library();
                 l.id = libraryIndex;
                 libraryIndex++;
@@ -72,5 +75,6 @@ public class Manager {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+        System.out.println("Read over.");
     }
 }
