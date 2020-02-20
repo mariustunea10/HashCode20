@@ -18,7 +18,7 @@ public class Manager {
     }
 
     public static void SortBookByIdInLib(Library library){
-        library.Books.sort((h1, h2) -> Integer.compare(h1.id, h2.id));
+        library.Books.sort((h1, h2) -> Integer.compare(h1.score, h2.score));
         System.out.println(AllLibs.size());
     }
 
@@ -40,9 +40,12 @@ public class Manager {
             String line = scanner.nextLine();
             line = scanner.nextLine();
             String[] splited = line.split(" ");
+            int idBook = 0;
             for (String s: splited) {
                 Book b = new Book();
-                b.id = Integer.parseInt(s);
+                b.id = idBook++;
+                b.score = Integer.parseInt(s);
+
                 AllBooks.add(b);
             }
 
