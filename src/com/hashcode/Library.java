@@ -10,4 +10,5 @@ public class Library {
     public int Time;
     public int NoOfBookPerDay;
     public int NoOfBooks;
+    public int id;
 }

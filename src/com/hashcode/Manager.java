@@ -50,9 +50,12 @@ public class Manager {
                 AllBooks.add(b);
             }
 
+            int libraryIndex = 0;
             while(scanner.hasNextLine()){
                 line = scanner.nextLine();
                 Library l = new Library();
+                l.id = libraryIndex;
+                libraryIndex++;
                 splited = line.split(" ");
                 l.NoOfBooks = Integer.parseInt(splited[0]);
                 l.Time = Integer.parseInt(splited[1]);

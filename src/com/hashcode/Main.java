@@ -6,5 +6,7 @@ public class Main {
 
         Manager.Read();
         Manager.SortByDaysAllLibs();
+        Logic.IterateStrategy1();
+        WriterInFile.Write();
     }
 }
