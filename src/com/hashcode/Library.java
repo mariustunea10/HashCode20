@@ -11,4 +11,5 @@ public class Library {
     public int NoOfBookPerDay;
     public int NoOfBooks;
     public int id;
+    public int totalScore =0;
 }

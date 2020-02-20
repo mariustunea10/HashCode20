@@ -19,13 +19,24 @@ public class Manager {
     public static final String F = "f_libraries_of_the_world";
 
 
-    public static final String EXAMPLE = F;
+    public static final String EXAMPLE = E;
 
+
+//    public static void SortByDaysAllLibs(){
+//        AllLibs.sort((h1, h2) -> Integer.compare(h1.Time, h2.Time));
+//        System.out.println(AllLibs.size());
+//    }
 
     public static void SortByDaysAllLibs(){
+//        AllLibs.sort((h1, h2) -> Integer.compare(h2.totalScore, h1.totalScore));
+
+        AllLibs.sort((h1, h2) -> Integer.compare(h2.NoOfBookPerDay, h1.NoOfBookPerDay));
+        AllLibs.sort((h1, h2) -> Integer.compare(h2.totalScore, h1.totalScore));
         AllLibs.sort((h1, h2) -> Integer.compare(h1.Time, h2.Time));
         System.out.println(AllLibs.size());
     }
+
+
 
     public static void SortBookByIdInLib(Library library){
         library.Books.sort((h1, h2) -> Integer.compare(h2.score, h1.score));
@@ -78,6 +89,7 @@ public class Manager {
                 for(int i =0; i< l.NoOfBooks;i++){
                     int pos = Integer.parseInt(splited[i]);
                     l.Books.add(AllBooks.get(pos));
+                    l.totalScore = l.totalScore + AllBooks.get(pos).score;
                 }
                 AllLibs.add(l);
             }
