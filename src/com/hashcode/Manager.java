@@ -22,6 +22,13 @@ public class Manager {
         System.out.println(AllLibs.size());
     }
 
+    public static void SortBooksInAllLibs(){
+        for (Library l: AllLibs
+             ) {
+            SortBookByIdInLib(l);
+        }
+    }
+
     public static void Read(){
         Scanner scanner = null;
         try {
@@ -49,9 +56,8 @@ public class Manager {
                 line = scanner.nextLine();
                 splited = line.split(" ");
                 for(int i =0; i< l.NoOfBooks;i++){
-                    Book b = new Book();
-                    b.id = Integer.parseInt(splited[i]);
-                    l.Books.add(b);
+                    int pos = Integer.parseInt(splited[i]);
+                    l.Books.add(AllBooks.get(pos));
                 }
                 AllLibs.add(l);
             }
