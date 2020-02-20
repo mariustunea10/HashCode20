@@ -25,7 +25,7 @@ public class Logic {
 
     public static void DoWork(){
         for (Library l:libraryWorking) {
-            l.
+            
         }
     }
 }
